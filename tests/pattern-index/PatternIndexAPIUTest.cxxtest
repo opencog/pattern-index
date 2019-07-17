@@ -24,7 +24,7 @@
 
 #include <opencog/util/Config.h>
 #include <opencog/atomspace/AtomSpace.h>
-#include <opencog/learning/pattern-index/PatternIndexAPI.h>
+#include <opencog/pattern-index/PatternIndexAPI.h>
 #include <opencog/guile/SchemeEval.h>
 
 #include <vector>
@@ -76,7 +76,7 @@ PatternIndexAPIUTest::PatternIndexAPIUTest()
     config().set("PatternIndex::CoherenceModulatorH", "coherence");
 
     // KB file names for querying and mining
-    std::string pwd(PROJECT_SOURCE_DIR "/tests/learning/pattern-index/");
+    std::string pwd(PROJECT_SOURCE_DIR "/tests/pattern-index/");
     toy_query_fname = pwd + "toy-example-query.scm";
     toy_mining_fname = pwd + "toy-example-mining.scm";
 }
