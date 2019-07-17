@@ -11,10 +11,6 @@ ADD_LIBRARY (patternindex SHARED
 	TypeFrame
 )
 
-ADD_DEPENDENCIES (patternindex
-	nlp_atom_types
-)
-
 TARGET_LINK_LIBRARIES(patternindex
 	${ATOMSPACE_LIBRARIES}
 )
@@ -44,14 +40,16 @@ INSTALL (FILES
 	TypeFrame.h
 	TypeFrameIndex.h
 	TypeFrameIndexBuilder.h
-	DESTINATION "include/${PROJECT_NAME}/learning/pattern-index"
+	DESTINATION "include/${PROJECT_NAME}/pattern-index"
 )
 
 INSTALL (TARGETS patternindex DESTINATION "lib${LIB_DIR_SUFFIX}/opencog")
 
+DECLARE_GUILE_CONFIG_TARGET(SCM_CONFIG "opencog oc-config" "OPENCOG_TEST")
+
 ADD_GUILE_MODULE (FILES
 	pattern-index.scm
-	MODULE_DESTINATION "${GUILE_SITE_DIR}/opencog/learning/pattern-index"
+	MODULE_DESTINATION "${GUILE_SITE_DIR}/opencog/pattern-index"
 )
 
 ADD_GUILE_EXTENSION(SCM_CONFIG patternindex "opencog-ext-path-pattern-index")
