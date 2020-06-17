@@ -1480,7 +1480,7 @@ void TypeFrameIndex::query(vector<ResultPair> &answer,
     if (noPermutations) {
         for (const ResultPair& ufa : unfilteredAnswer) {
             bool none_eq =
-                opencog::none_of(answer,
+                std::none_of(answer.begin(), answer.end(),
                                  [&](const ResultPair& asw) {
                                      return equivalentVarMappings(ufa.second,
                                                                   asw.second,

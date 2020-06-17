@@ -493,15 +493,15 @@ Handle PatternIndexAPI::query(Handle key, Handle queryLink)
                                               vargnd.second);
             variableMapping.push_back(link);
         }
-        Handle satisfyingSubgraph = atomSpace->add_link(LIST_LINK, result.first);
-        Handle varMapping = atomSpace->add_link(LIST_LINK, variableMapping);
+        Handle satisfyingSubgraph = atomSpace->xadd_link(LIST_LINK, result.first);
+        Handle varMapping = atomSpace->xadd_link(LIST_LINK, variableMapping);
         Handle rLink = atomSpace->add_link(LIST_LINK,
                                            satisfyingSubgraph,
                                            varMapping);
         resultVector.push_back(rLink);
     }
 
-    return atomSpace->add_link(LIST_LINK, resultVector);
+    return atomSpace->xadd_link(LIST_LINK, resultVector);
 }
 
 void PatternIndexAPI::minePatterns(vector<MiningResult> &answer, 
@@ -531,7 +531,7 @@ Handle PatternIndexAPI::minePatterns(Handle key)
         resultVector.push_back(link);
     }
 
-    return atomSpace->add_link(LIST_LINK, resultVector);
+    return atomSpace->xadd_link(LIST_LINK, resultVector);
 }
 
 // Compliance with OpenCog's style of singleton access.
