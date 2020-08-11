@@ -20,7 +20,7 @@ may be essential to allow the algorithms to run in acceptable time.
 
 So this module allows the user to do something like:
 
-1. Load a large SCM with lots of atoms
+1. Load a large file with lots of atoms (in Atomese s-expression format)
 2. Build an index with only the relevant atoms
 3. Use this index to gather information from the AtomSpace as required by the algorithm
 4. Optionally discard the index when it is no longer necessary (this will have no effect on the AtomSpace)
