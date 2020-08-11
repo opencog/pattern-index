@@ -54,7 +54,7 @@ It is said to be a proof-of-concept, but that the code base is no longer relevan
 for OpenCog usage.  Note that Andre Senna does NOT show up in the `git log` list;
 the code was apparently developed outside of git, and Andre does not maintain a
 github ID. Andre wrote 98% of the code here; the individuals whose names do appear
-in git commits were those who were tasked in integrating, moving and organizing
+in git commits are those who were tasked in integrating, moving and organizing
 Andre's code.
 
 This code was buildable and operable at the time it was archived.
