@@ -47,6 +47,22 @@ IS NOT IMPLEMENTED YET but it is an fairly-easy-to-implement new feature.
 Once we have this feature we would be able to do fairly fast lookup for
 patterns in huge datasets in disk.
 
+## Status
+
+At the request of the original author, Andre Senna, this repo is being archived. 
+It is said to be a proof-of-concept, but that the code base is no longer relevant
+for OpenCog usage.  Note that Andre Senna does NOT show up in the `git log` list;
+the code was apparently developed outside of git, and Andre does not maintain a
+github ID. Andre wrote 98% of the code here; the individuals whose names do appear
+in git commits were those who were tasked in integrating, moving and organizing
+Andre's code.
+
+This code was buildable and operable at the time it was archived.
+
+There seem to be some interesting ideas in here; interested users are encouraged
+to steal those ideas and do something useful with them, or alternately even take
+some of the existing code (subject to license constraints) and re-use it.
+
 ## Relevant files for potential users (examples and API)
 
 If you plan to use this module you want to take a look at the following files:
